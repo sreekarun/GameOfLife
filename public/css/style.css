@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.cell{
+	width: 16px;
+	height:16px;
+	border: 1px solid black;
+	position : absolute;
+}
+
+.game-container{
+	width: 400px;
+	height:400px;
+	margin: 0 auto;
+	overflow : hidden;
+	position: relative;
+}
+
+.alive{
+	background-color : green;
+}

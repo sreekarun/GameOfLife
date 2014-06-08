@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  link(rel="stylesheet" href="css/bootstrap.css")
+  .app-container(ng-app="gameModule" ng-controller="gameCtrl")
+    .game-container( ng-controller="containerCtrl")
+      .cell(ng-repeat='cell in arr' game-cell="" alive="cell.alive" cell="cell" ng-class="{alive: cell.alive }" ng-click="clicked()")
+    
+    .game-control( ng-controller="controlCtrl")
+      button.btn.btn-default(type="button" ng-click="start()") Start
+      button.btn.btn-default(type="button" ng-click="step()") Step
+      button.btn.btn-default(type="button" ng-click="stop()") Stop    
+  
+
+  script(src="js/lib/jquery.js")
+  script(src="js/lib/angular.js")
+  script(src="js/app/app.js")
+  script(src="js/app/services/gameService.js")
+  script(src="js/app/controllers/gameCtrl.js")
+  script(src="js/app/controllers/controlCtrl.js")
+  script(src="js/app/controllers/containerCtrl.js")
+  script(src="js/app/directives/gameCell.js")
+
